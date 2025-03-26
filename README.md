@@ -18,6 +18,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="1200" height="500" src="/Images/BLOCK.png">
 </p>
 
+### Overview
+
 - **Tensor Slice vs. DSP Slice** – A **Tensor Slice** is to deep learning what a **DSP Slice** is to digital signal processing, optimized for machine learning workloads.  
 
 - **Supported Operations** – It accelerates **matrix-matrix and matrix-vector multiplications**, along with **element-wise (Eltwise) addition, subtraction, and multiplication**, crucial for fully connected, convolutional, and recurrent layers.  
@@ -37,46 +39,36 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="1400" height="500" src="/Images/MAC.png">
 </p>
 
-**Inputs**:
-in [95:0] – 96-bit input operand (can represent multiple values like A, B, and bias).
+**I/O Overview**
 
-clk – System clock signal.
-
-rst – Active-high reset signal.
-
-chain_in – Enables input chaining from a previous PE.
-
-ch_in_ax_fwd – Forwarding control for chaining input to AX computation.
-
-ax_ay_fwd – Forwarding control between internal compute stages.
-
-acc – Accumulation enable signal for multi-cycle operations.
-
-op_sel – Selects operation mode (e.g., multiplication, addition).
-
-m2 [1:0] – Multiplexer control for operand selection.
-
-chain_out [1:0] – Controls chaining output selection.
-
-ch_in [31:0] – 32-bit chained input from another PE.
-
-**Outputs**:
-ch_out [31:0] – 32-bit chained output to another PE.
-
-out [31:0] – Final computed result output from the PE.
+| Signal         | Width  | Description                           | Signal      | Width | Description                  |
+|---------------|--------|---------------------------------------|------------|-------|------------------------------|
+| `in`         | 96     | Operand input (A, B, bias)           | `ch_out`   | 32    | Chained output to another PE |
+| `clk`        | 1      | System clock                         | `out`      | 32    | Final computed result        |
+| `rst`        | 1      | Active-high reset                    | `op_sel`   | 1     | Operation select (MUL, ADD)  |
+| `chain_in`   | 1      | Enables input chaining               | `m2`       | 2     | Multiplexer control          |
+| `ch_in_ax_fwd` | 1    | Forwarding control for AX            | `chain_out`| 2     | Chaining output selection    |
+| `ax_ay_fwd`  | 1      | Forwarding control for AY            | `ch_in`    | 32    | Chained input from PE        |
+| `acc`        | 1      | Accumulation enable                  |            |       |                              |
 
 **Operation Overview**
 
-OPSEL,AND, OP_SEL, ACC, AX_AY_FWD, CH_IN_AX_FWD, M2, CHAIN_IN, CHAIN_OUT 
+ Operation            | OPSEL | OP_SEL | ACC | AX_AY_FWD | CH_IN_AX_FWD | M2    | CHAIN_IN |
+|----------------------|------ |------- |---- |---------- |------------- |------ |--------- |
+| Multiply (MULT)      | 0     | 1      | 0   | 1         | 1            | 2'b10 | 0       |
+| Addition (ADD)       | 1     | 1      | 0   | 1         | 1            | 2'b10 | 0       |
+| Subtraction (SUB)    | 1     | 1      | 0   | 1         | 1            | 2'b10 | 0       |
+| Multiply-Accumulate (MAC) | 0 | 1      | 1   | 1         | 1            | 2'b10 | 0       |
+| Multiply-Add (MADD)  | 0     | 1      | 0   | 1         | 1            | 2'b01 | 0       |
+| Multiply-Subtract (MSUB) | 1 | 1      | 0   | 1         | 1            | 2'b01 | 0       |
 
-- Multiply (MULT)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 
-- Addition (ADD)	out = OPSEL = 1 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 
-- Subtraction (SUB)	out =  OPSEL = 1 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 (Input given in 2's complement)
-- Multiply-Accumulate (MAC)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 1, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0
-- Multiply-Add (MADD)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0 
-- Multiply-Subtract (MSUB)	out = OPSEL = 1 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0
+| CHAIN_IN | CH_IN_AX_FWD | CHAIN_OUT | Description                           |
+|--------- |------------ |---------- |-------------------------------------- |
+| 1        | 0          | 00        | Chained Multiply (MULT)               |
+| 1        | 0          | 01        | Chained Addition/Subtraction (ADD/SUB) |
+| 1        | 0          | 10        | Chained Multiply-Accumulate (MAC)     |
 
-For Chaining CHAIN_IN = 1 AND CH_IN_AX_FWD = 0 AND CHAIN_OUT = 00 (MULT) , 01 (ADD/SUB) , 10 (MAC) for doing all the above with chain inputs from latest chain input port.
+### Overview
 
 - **Comprehensive Operations** – The Processing Element (PE) supports MAC, MULT, ADD/SUB, MADD/MSUB and PE chaining, enabling efficient chianed computations.
 
