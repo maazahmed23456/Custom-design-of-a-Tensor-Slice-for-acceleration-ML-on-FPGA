@@ -160,13 +160,27 @@ Integrate into larger AI accelerator architectures with minimal overhead. 🚀
 
 ### Synthesis and Gate Level Simulation (GLS)
 
+- **NETLIST**
  <p align="center">
   <img width="1200" height="500" src="/Images/NETLIST.png">
 </p>
 
+- **GLS (TENTATIVELY DONE IN XCELIUM)**
  <p align="center">
   <img width="1200" height="500" src="/Images/GLS.png">
 </p>
+
+- **AREA REPORT**
+<p align="center">
+  <img width="1200" height="500" src="/Images/AREA.png">
+</p>
+
+- **POWER REPORT**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/POWER.png">
+</p>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
