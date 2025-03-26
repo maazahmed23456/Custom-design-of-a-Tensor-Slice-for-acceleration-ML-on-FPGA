@@ -93,9 +93,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - 6️⃣ Final GDSII Generation – ICC2, Calibre (DRC/LVS)
   
 - **Architecture Design Flow**
-- 1️⃣ Tensor Slice Architecture Definition
 
-Define Tensor Slice role in AI acceleration (MACs, matrix ops).
+- 1️⃣ Tensor Slice Architecture Definition
 
 Determine PE grid size (e.g., 4×4 systolic array).
 
@@ -103,27 +102,16 @@ Establish precision handling (FP32 core with reuse for BF16, FP16, INT16).
 
 - 2️⃣ Processing Element (PE) & Compute Core Design
 
-Design PE with MAC, DOT, MADD, ADD/SUB support.
-
 Implement FP32 compute core with fixed-width operand reuse.
-
-Optimize PE chaining for matrix-vector and matrix-matrix ops.
 
 - 3️⃣ Tensor Slice Control & Dataflow Optimization
 
 Design input/output logic for efficient operand routing.
 
-Implement local crossbar for flexible interconnect.
-
-Optimize pipelining & systolic data movement for high throughput.
-
 - 4️⃣ Scalability & System Integration
 
 Ensure Tensor Slice tiling for larger tensor computations.
 
-Balance latency, throughput, and power efficiency.
-
-Integrate into larger AI accelerator architectures with minimal overhead. 🚀
 
 ## Current Progress - Initial RTL design and iteration of PE completed 
 
