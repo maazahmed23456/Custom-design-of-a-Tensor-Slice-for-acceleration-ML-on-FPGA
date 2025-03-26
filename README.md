@@ -15,7 +15,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 ## Block Diagram
 
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/BLOCK.png">
 </p>
 
 - **Tensor Slice vs. DSP Slice** – A **Tensor Slice** is to deep learning what a **DSP Slice** is to digital signal processing, optimized for machine learning workloads.  
@@ -34,12 +34,9 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 ## Block Diagram
 
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/MAC.png">
 </p>
 
- <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
-</p>
 
 Functionality	Equation in Design	Control Signals
 Multiply (MULT)	out = r2_s1 * r3_s1	m5 = 0, m4 = 0
@@ -112,12 +109,24 @@ Integrate into larger AI accelerator architectures with minimal overhead. 🚀
 ## Processing Element (PE)
 ### RTL Design and Functional Verification
 
+- **SCHEMATIC**
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/SCHEMATIC.png">
 </p>
 
+- **MULT AND ADD/SUB**
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/MULT , ADD ( OPSEL = 0 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0 ).png">
+</p>
+
+- **MULT-ADD(MADD)/MULT-SUB(MSUB)**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/MULT - ADD ( OPSEL = 0 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 ).png">
+</p>
+
+- **MULT AND ACC (MAC)**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/MULT AND ACC ( OPSEL = 0 AND OP_SEL = 1 , ACC = 1, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 ).png">
 </p>
 
 ### Synthesis and Gate Level Simulation (GLS)
