@@ -37,19 +37,48 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="1200" height="500" src="/Images/MAC.png">
 </p>
 
+**Inputs**:
+in [95:0] – 96-bit input operand (can represent multiple values like A, B, and bias).
 
-Functionality	Equation in Design	Control Signals
-Multiply (MULT)	out = r2_s1 * r3_s1	m5 = 0, m4 = 0
-Addition (ADD)	out = r2_s1 + r3_s1	m5 = 0, m4 = 1
-Subtraction (SUB)	out = r2_s1 - r3_s1	m5 = 0, m4 = 1, sub_enable = 1
-Multiply-Accumulate (MAC)	out = (m5 ? out : r1_s3) + (m4 ? m2_out : r2_s3)	m5 = 1, m4 = 1
-Multiply-Add (MADD)	out = (r2_s1 * r3_s1) + side_in1	m5 = 0, m4 = 1, m6 = 1
-Multiply-Subtract (MSUB)	out = (r2_s1 * r3_s1) - side_in1	m5 = 0, m4 = 1, m6 = 1, sub_enable = 1
-Systolic Vector Dot Product	S_i = S_{i-1} + (r2_s1 * r3_s1)	m5 = 1, m4 = 1, systolic_mode = 1
-Systolic FIR Mode	out = out + (side_in1 * r1_s1)	m5 = 1, m4 = 0, fir_mode = 1
-Vector One Mode	side_out1 = r1_s1 * side_in1	m1 = 1, m7 = 0
+clk – System clock signal.
 
-- **Comprehensive Operations** – The Processing Element (PE) supports MAC, MULT, ADD/SUB, MADD/MSUB, DOT PRODUCT, and PE chaining, enabling efficient vector computations.
+rst – Active-high reset signal.
+
+chain_in – Enables input chaining from a previous PE.
+
+ch_in_ax_fwd – Forwarding control for chaining input to AX computation.
+
+ax_ay_fwd – Forwarding control between internal compute stages.
+
+acc – Accumulation enable signal for multi-cycle operations.
+
+op_sel – Selects operation mode (e.g., multiplication, addition).
+
+m2 [1:0] – Multiplexer control for operand selection.
+
+chain_out [1:0] – Controls chaining output selection.
+
+ch_in [31:0] – 32-bit chained input from another PE.
+
+**Outputs**:
+ch_out [31:0] – 32-bit chained output to another PE.
+
+out [31:0] – Final computed result output from the PE.
+
+**Operation Overview**
+
+OPSEL,AND, OP_SEL, ACC, AX_AY_FWD, CH_IN_AX_FWD, M2, CHAIN_IN, CHAIN_OUT 
+
+- Multiply (MULT)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 
+- Addition (ADD)	out = OPSEL = 1 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 
+- Subtraction (SUB)	out =  OPSEL = 1 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 (Input given in 2's complement)
+- Multiply-Accumulate (MAC)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 1, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0
+- Multiply-Add (MADD)	out = OPSEL = 0 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0 
+- Multiply-Subtract (MSUB)	out = OPSEL = 1 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0
+
+For Chaining CHAIN_IN = 1 AND CH_IN_AX_FWD = 0 AND CHAIN_OUT = 00 (MULT) , 01 (ADD/SUB) , 10 (MAC) for doing all the above with chain inputs from latest chain input port.
+
+- **Comprehensive Operations** – The Processing Element (PE) supports MAC, MULT, ADD/SUB, MADD/MSUB and PE chaining, enabling efficient chianed computations.
 
 - **Dedicated FP32 Fixed Unit** – Unlike virtual logic and hardware sharing, the PE contains a fixed FP32 unit with dedicated adders and multipliers for all supported formats.
 
@@ -132,12 +161,14 @@ Integrate into larger AI accelerator architectures with minimal overhead. 🚀
 ### Synthesis and Gate Level Simulation (GLS)
 
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/NETLIST.png">
 </p>
 
  <p align="center">
-  <img width="1200" height="500" src="/Images/Screenshot 2025-03-13 122353.png">
+  <img width="1200" height="500" src="/Images/GLS.png">
 </p>
+
+
 
 
 
