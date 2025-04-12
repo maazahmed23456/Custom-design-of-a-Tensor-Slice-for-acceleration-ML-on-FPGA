@@ -142,10 +142,21 @@ Ensure Tensor Slice tiling for larger tensor computations.
 
 ### Synthesis and Gate Level Simulation (GLS)
 
-- **NETLIST**
+- **BLOCK DIAGRAM**
  <p align="center">
-  <img width="1200" height="500" src="/Images/NETLIST.png">
+  <img width="1200" height="500" src="/Images/PU BLOCK.png">
 </p>
+
+- **PROCESSING ELEMENT NETLIST**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/PU.png">
+</p>
+
+- **CONTROL UNIT NETLIST**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/CU.png">
+</p>
+
 
 - **GLS (TENTATIVELY DONE IN XCELIUM)**
  <p align="center">
