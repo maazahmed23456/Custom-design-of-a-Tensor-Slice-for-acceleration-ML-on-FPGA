@@ -168,6 +168,12 @@ Ensure Tensor Slice tiling for larger tensor computations.
   <img width="1200" height="500" src="/Images/AREA.png">
 </p>
 
+- **TIMING REPORT**
+- The maximum delay of the Processing Element is just 2.45 ns 
+ <p align="center">
+  <img width="1200" height="500" src="/Images/TIMING.png">
+</p>
+
 - **POWER REPORT**
  <p align="center">
   <img width="1200" height="500" src="/Images/POWER.png">
