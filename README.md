@@ -1,10 +1,9 @@
 # Custom-design-of-a-Tensor-Slice-for-acceleration-ML-on-FPGA
-Custom design and evaluation of a Tensor Block for accelerating ML and DL processes on FPGA
 
 📊 Progress: 🟩⬜⬜⬜⬜ (20%)  **(WORK PROGRESS AND RESULTS AT THE END OF THE DOCUMENTATION)**
 
 ## Overview
-- Objective: Design and evaluate a custom tensor slice for accelerating ML and DL on FPGA's
+- Objective: Design and evaluate a novel tensor slice for accelerating ML and DL on FPGA's
 - Technology Node: 14nm
 - Design Flow: RTL to GDSII using Synopsys EDA Tools (inclduing DFT and STA )
 - Target Application: Matrix Computation (GEMM) , ML and DL applications 
