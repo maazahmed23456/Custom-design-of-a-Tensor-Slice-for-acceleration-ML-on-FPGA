@@ -186,14 +186,19 @@ Ensure Tensor Slice tiling for larger tensor computations.
   <img width="1200" height="500" src="/Images/SYSTOLIC ARRAY SCHEMATIC.png">
 </p>
 
-- **MULT AND ADD/SUB**
+- **INPUTS**
  <p align="center">
-  <img width="1200" height="500" src="/Images/INPUTS ZOOM.png">
+  <img width="1800" height="500" src="/Images/INPUTS ZOOM.png">
 </p>
 
-- **MULT-ADD(MADD)/MULT-SUB(MSUB)**
+- **OUTPUTS**
  <p align="center">
-  <img width="1200" height="500" src="/Images/OUTPUT ZOOM.png">
+  <img width="1800" height="500" src="/Images/OUTPUT ZOOM.png">
+</p>
+
+- **FULL SIMULATION**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/SIM.png">
 </p>
 
 ********** WORK UNDER PROGRESS ( CURRENTLY FIGURING OUT HOW TO DEVELOP SYSTOLIC ARRAY ARCHITECTURE USING THE PE ************
