@@ -19,6 +19,10 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="1200" height="500" src="/Images/BLOCK.png">
 </p>
 
+ <p align="center">
+  <img width="1200" height="500" src="/Images/BLOCK.png">
+</p>
+
 ### Overview
 
 - **Tensor Slice vs. DSP Slice** – A **Tensor Slice** is to deep learning what a **DSP Slice** is to digital signal processing, optimized for machine learning workloads.  
