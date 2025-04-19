@@ -33,7 +33,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 - **Data Handling** – **Input logic** aligns data for **systolic computation**, **output logic** selects and shifts processed data, and **muxing logic** configures different operational modes.
 
-## Processing Element (PE)
+## Processing Element (PE) 
 ## Block Diagram
 
  <p align="center">
@@ -116,7 +116,7 @@ Ensure Tensor Slice tiling for larger tensor computations.
 
 ## Current Progress - Initial RTL design and iteration of PE completed 
 
-## Processing Element (PE)
+## Processing Element (PE) - Floating Point
 ### RTL Design and Functional Verification
 
 - **SCHEMATIC**
