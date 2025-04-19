@@ -188,12 +188,12 @@ Ensure Tensor Slice tiling for larger tensor computations.
 
 - **INPUTS**
  <p align="center">
-  <img width="1800" height="500" src="/Images/INPUTS ZOOM.png">
+  <img width="1800" height="500" src="/Images/INPUTS.png">
 </p>
 
 - **OUTPUTS**
  <p align="center">
-  <img width="1800" height="500" src="/Images/OUTPUT ZOOM.png">
+  <img width="1800" height="500" src="/Images/OUTPUT.png">
 </p>
 
 - **FULL SIMULATION**
