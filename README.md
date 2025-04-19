@@ -34,7 +34,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - **Data Handling** – **Input logic** aligns data for **systolic computation**, **output logic** selects and shifts processed data, and **muxing logic** configures different operational modes.
 
 ## Processing Element (PE) 
-## Block Diagram
+## FLOATING POINT
 
  <p align="center">
   <img width="1400" height="500" src="/Images/MAC.png">
@@ -82,6 +82,17 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - **No Logical PE Mapping** – Unlike architectures with logical PE scaling (e.g., 16-bit → 1 PE, 8-bit → 4 PEs), each physical PE operates independently without virtual partitioning.
 
 - **Efficient Multi-Format Computation** – This design ensures seamless format adaptation while maintaining high compute efficiency for mixed-precision deep learning workloads.
+
+## FIXED POINT
+
+| Signal       | Width             | Description                    | Signal    | Width             | Description                 |
+|--------------|-------------------|--------------------------------|-----------|-------------------|-----------------------------|
+| `clk`        | 1 bit              | Primary clock signal           | `r1`      | 256 bits [255:0]  | Output register 1           |
+| `clk2`       | 1 bit              | Secondary clock signal         | `r2`      | 256 bits [255:0]  | Output register 2           |
+| `rst`        | 1 bit              | Asynchronous reset             | `r3`      | 256 bits [255:0]  | Output register 3           |
+| `a_data`     | 128 bits [127:0]    | Input data bus A                | `r4`      | 256 bits [255:0]  | Output register 4           |
+| `b_data`     | 128 bits [127:0]    | Input data bus B                |           |                   |                             |
+
 
 ## Methodology 
 
