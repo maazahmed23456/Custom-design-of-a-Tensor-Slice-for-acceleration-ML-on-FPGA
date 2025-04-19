@@ -178,6 +178,24 @@ Ensure Tensor Slice tiling for larger tensor computations.
   <img width="1200" height="500" src="/Images/POWER.png">
 </p>
 
+## Processing Element (PE) - Fixed Point 
+### RTL Design and Functional Verification
+
+- **SCHEMATIC**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/SCHEMATIC.png">
+</p>
+
+- **MULT AND ADD/SUB**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/MULT , ADD ( OPSEL = 0 AND OP_SEL = 1 , ACC = 0 , AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b01 , CHAIN_IN = 0 ).png">
+</p>
+
+- **MULT-ADD(MADD)/MULT-SUB(MSUB)**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/MULT - ADD ( OPSEL = 0 AND OP_SEL = 1 , ACC = 0, AX_AY_FWD = 1 , CH_IN_AX_FWD = 1 , M2 = 2'b10 , CHAIN_IN = 0 ).png">
+</p>
+
 ********** WORK UNDER PROGRESS ( CURRENTLY FIGURING OUT HOW TO DEVELOP SYSTOLIC ARRAY ARCHITECTURE USING THE PE ************
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
