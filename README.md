@@ -20,7 +20,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 </p>
 
  <p align="center">
-  <img width="1200" height="500" src="/Images/BLOCK.png">
+  <img width="500" height="600" src="/Images/SYSTOLIC ARRAY FLOW.png">
 </p>
 
 ### Overview
