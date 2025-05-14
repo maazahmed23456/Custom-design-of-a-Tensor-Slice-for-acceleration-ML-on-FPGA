@@ -72,27 +72,6 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - 4️⃣ Place & Route (PnR) – IC Compiler II (ICC2) 
 - 5️⃣ Power Analysis & Signoff – PrimeTime-PX (PTPX)
 - 6️⃣ Final GDSII Generation – ICC2, Calibre (DRC/LVS)
-  
-- **Architecture Design Flow**
-
-- 1️⃣ Tensor Slice Architecture Definition
-
-Determine PE grid size (e.g., 4×4 systolic array).
-
-Establish precision handling (FP32 core with reuse for BF16, FP16, INT16).
-
-- 2️⃣ Processing Element (PE) & Compute Core Design
-
-Implement FP32 compute core with fixed-width operand reuse.
-
-- 3️⃣ Tensor Slice Control & Dataflow Optimization
-
-Design input/output logic for efficient operand routing.
-
-- 4️⃣ Scalability & System Integration
-
-Ensure Tensor Slice tiling for larger tensor computations.
-
 
 ## Current Progress 
 
