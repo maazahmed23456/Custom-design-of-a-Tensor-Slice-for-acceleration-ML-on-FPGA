@@ -91,17 +91,17 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 - **MATRIX-MATRIX MULTIPLICATION**
  <p align="center">
-  <img width="1600" height="400" src="/Images/MULT.png">
+  <img width="1600" height="300" src="/Images/MULT.png">
 </p>
 
 - **MATRIX-VECTOR MULTIPLICATION**
  <p align="center">
-  <img width="1600" height="400" src="/Images/MAT-VEC.png">
+  <img width="1600" height="300" src="/Images/MAT-VEC.png">
 </p>
 
 - **MATRIX ADDITION**
  <p align="center">
-  <img width="1600" height="400" src="/Images/ADD.png">
+  <img width="1600" height="300" src="/Images/ADD.png">
 </p>
 
 - **MATRIX TRANSPOSE**
