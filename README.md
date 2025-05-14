@@ -59,8 +59,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 | `op` | `op2` | Operation                                 | Description                                                                 |
 |------|-------|-------------------------------------------|-----------------------------------------------------------------------------|
-| 1    | 0     | Matrix Multiplication                     | Performs matrix multiplication between `a_data` and `b_data`                |
-| 0    | 0     | Matrix Addition                           | Performs element-wise addition of `a_data` and `b_data`                     |
+| 0    | 0     | Matrix Multiplication                     | Performs matrix multiplication between `a_data` and `b_data`                |
+| 1    | 0     | Matrix Addition/Subtraction               | Performs element-wise addition of `a_data` and `b_data`                     |
 | x    | 1     | Matrix Transpose of Input A               | Transposes the matrix provided in `a_data` (column-wise input assumed)      |
 
 ## Methodology 
