@@ -4,9 +4,9 @@
 
 ## Overview
 - Objective: Design and evaluate a novel tensor slice for accelerating ML and DL on FPGA's
-- Technology Node: 14nm
+- Technology Node: 32nm
 - Design Flow: RTL to GDSII using Synopsys EDA Tools (inclduing DFT and STA )
-- Target Application: Matrix Computation (GEMM) , ML and DL applications 
+- Target Application: Matrix Multiplication - Addition/Subtraction - Transpose , CNN and Transformer Applications 
 
 ## Introduction
 FPGAs have evolved to accelerate deep learning (DL) by integrating specialized hardware, such as AI processing engines, low-precision arithmetic (8-bit fixed-point, FP16), and shadow multipliers. A recent advancement in this domain is **Tensor Slices**, which enhance FPGA compute density by embedding **systolic arrays** for efficient tensor operations. These slices support multiple precision formats and can be dynamically reconfigured into independent multipliers and MAC units. A local crossbar at the inputs reduces routing congestion, improving performance. Building on this concept, I aim to **custom design a Tensor Slice**, optimizing its architecture for higher efficiency, flexibility, and seamless FPGA integration while maintaining fine-grained programmability for other applications.
@@ -23,7 +23,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="500" height="500" src="/Images/SYSTOLIC ARRAY FLOW.png">
 </p>
 
-### Overview
+## Key Features
 
 - **Tensor Slice vs. DSP Slice** – A **Tensor Slice** is to deep learning what a **DSP Slice** is to digital signal processing, optimized for machine learning workloads.  
 
