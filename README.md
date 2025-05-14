@@ -1,6 +1,6 @@
 # Custom-design-of-a-Tensor-Slice-for-acceleration-ML-on-FPGA
 
-📊 Progress: 🟩⬜⬜⬜⬜ (20%)  **(WORK PROGRESS AND RESULTS AT THE END OF THE DOCUMENTATION)**
+📊 Progress: 🟩🟩🟩⬜⬜ (60%)  **(WORK PROGRESS AND RESULTS AT THE END OF THE DOCUMENTATION)**
 
 ## Overview
 - Objective: Design and evaluate a novel tensor slice for accelerating ML and DL on FPGA's
