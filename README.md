@@ -38,7 +38,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - **Data Handling** – **Input logic** aligns data for **systolic computation**, **output logic** selects and shifts processed data, and **muxing logic** configures different operational modes.
 
 
-## I/O Overview
+## I/O and Operation Overview
 
 **Input and Output Ports**
 
@@ -55,6 +55,13 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 |                  |        |                                            | `out_transpose3` | 256 | Transposed output row 3          |
 |                  |        |                                            | `out_transpose4` | 256 | Transposed output row 4          |
 
+**Operation Table**
+
+| `op` | `op2` | Operation                                 | Description                                                                 |
+|------|-------|-------------------------------------------|-----------------------------------------------------------------------------|
+| 1    | 0     | Matrix Multiplication                     | Performs matrix multiplication between `a_data` and `b_data`                |
+| 0    | 0     | Matrix Addition                           | Performs element-wise addition of `a_data` and `b_data`                     |
+| x    | 1     | Matrix Transpose of Input A               | Transposes the matrix provided in `a_data` (column-wise input assumed)      |
 
 ## Methodology 
 
