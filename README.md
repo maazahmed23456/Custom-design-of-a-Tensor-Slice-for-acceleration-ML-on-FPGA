@@ -75,7 +75,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## Current Progress 
 
-## Processing Element (PE) - Fixed Point 
+## 4x4 Systolic Array (can be extended to 8x8 , 16x16 as per requirement)
+
 ### RTL Design and Functional Verification
 
 - **SCHEMATIC**
