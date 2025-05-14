@@ -216,7 +216,6 @@ Ensure Tensor Slice tiling for larger tensor computations.
   <img width="1200" height="500" src="/Images/SIM.png">
 </p>
 
-********** WORK UNDER PROGRESS ( CURRENTLY FIGURING OUT HOW TO DEVELOP SYSTOLIC ARRAY ARCHITECTURE USING THE PE ************
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
