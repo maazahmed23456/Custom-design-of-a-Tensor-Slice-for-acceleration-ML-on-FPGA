@@ -73,8 +73,6 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 - 5️⃣ Power Analysis & Signoff – PrimeTime-PX (PTPX)
 - 6️⃣ Final GDSII Generation – ICC2, Calibre (DRC/LVS)
 
-## Current Progress 
-
 ## 4x4 Systolic Array (can be extended to 8x8 , 16x16 as per requirement)
 
 ## RTL Design and Functional Verification
@@ -116,6 +114,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
  <p align="center">
   <img width="2000" height="300" src="/Images/TRANS.png">
 </p>
+
+## Synthesis (Synopsys Design Compiler NXT)
 
 
 
