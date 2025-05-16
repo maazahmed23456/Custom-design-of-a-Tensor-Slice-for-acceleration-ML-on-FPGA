@@ -118,65 +118,65 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 ## Synthesis (Synopsys Design Compiler NXT)
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/BLOCK2.png">
+  <img width="2000" height="500" src="/Images/BLOCK2.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/NETLIST.png">
+  <img width="2000" height="500" src="/Images/NETLIST.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/AREA.png">
+  <img width="2000" height="500" src="/Images/AREA.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/POWER2.png">
+  <img width="2000" height="500" src="/Images/POWER2.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/TIMING1.png">
+  <img width="2000" height="500" src="/Images/TIMING1.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/TIMING2.png">
+  <img width="2000" height="500" src="/Images/TIMING2.png">
 </p>
 
 ## Implementation (Synopsys IC Compiler II)
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/IMPORT DESIGN.png">
+  <img width="2000" height="500" src="/Images/IMPORT DESIGN.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD0.5.png">
+  <img width="2000" height="500" src="/Images/PD0.5.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD1.png">
+  <img width="2000" height="500" src="/Images/PD1.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD2.png">
+  <img width="2000" height="500" src="/Images/PD2.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD3.png">
+  <img width="2000" height="500" src="/Images/PD3.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD6.png">
+  <img width="2000" height="500" src="/Images/PD6.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD7.png">
+  <img width="2000" height="500" src="/Images/PD7.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD8.png">
+  <img width="2000" height="500" src="/Images/PD8.png">
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/PD4.png">
+  <img width="2000" height="500" src="/Images/PD4.png">
 </p>
 
 
