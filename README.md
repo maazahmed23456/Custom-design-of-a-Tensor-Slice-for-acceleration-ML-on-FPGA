@@ -75,7 +75,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## 4x4 Systolic Array (can be extended to 8x8 , 16x16 as per requirement)
 
-## RTL Design and Functional Verification
+## RTL Design and Functional Verification (AMD Xilinx Vivado)
 
 - **Schematic**
  <p align="center">
