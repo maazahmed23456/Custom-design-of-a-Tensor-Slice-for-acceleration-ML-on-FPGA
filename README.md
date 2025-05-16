@@ -134,7 +134,17 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 </p>
 
 <p align="center">
-  <img width="2000" height="300" src="/Images/POWER.png">
+  <img width="2000" height="300" src="/Images/TIMING1.png">
+</p>
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/TIMING2.png">
+</p>
+
+## Implementation (Synopsys IC Compiler II)
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/TIMING2.png">
 </p>
 
 
