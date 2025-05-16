@@ -77,34 +77,41 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## 4x4 Systolic Array (can be extended to 8x8 , 16x16 as per requirement)
 
-### RTL Design and Functional Verification
+## RTL Design and Functional Verification
 
-- **SCHEMATIC**
+- **Schematic**
  <p align="center">
   <img width="1200" height="500" src="/Images/SYSTOLIC ARRAY SCHEMATIC.png">
 </p>
 
-- **INPUTS**
+<p align="center">
+  <img width="1200" height="500" src="/Images/IP MID.png">
+</p>
+
+
+### Simulation
+
+- **Inputs**
  <p align="center">
   <img width="1200" height="500" src="/Images/INPUTS.png">
 </p>
 
-- **MATRIX-MATRIX MULTIPLICATION**
+- **Matrix-Matrix Multiplication**
  <p align="center">
   <img width="2000" height="300" src="/Images/MULT.png">
 </p>
 
-- **MATRIX-VECTOR MULTIPLICATION**
+- **Matrix-Vector Multiplication**
  <p align="center">
   <img width="2000" height="300" src="/Images/MAT-VEC.png">
 </p>
 
-- **MATRIX ADDITION**
+- **Matrix Addition**
  <p align="center">
   <img width="2000" height="300" src="/Images/ADD.png">
 </p>
 
-- **MATRIX TRANSPOSE**
+- **Matrix Transpose**
  <p align="center">
   <img width="2000" height="300" src="/Images/TRANS.png">
 </p>
