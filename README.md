@@ -5,7 +5,7 @@
 ## Overview
 - Objective: Design and evaluate a novel tensor slice for accelerating ML and DL on FPGA's
 - Technology Node: 32nm
-- Design Flow: RTL to GDSII using Synopsys EDA Tools (inclduing DFT and STA )
+- Design Flow: RTL to GDSII using Synopsys EDA Tools
 - Target Application: Matrix Multiplication - Addition/Subtraction - Transpose , CNN and Transformer Applications 
 
 ## Introduction
