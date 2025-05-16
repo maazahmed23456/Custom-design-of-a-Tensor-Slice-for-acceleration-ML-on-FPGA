@@ -67,7 +67,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 - **Tool Flow (Synopsys EDA Tools)**
 - 1️⃣ RTL Design & Simulation/Verification – Verilog/SystemVerilog, Xilinx Vivado, VCS, Verdi
-- 2️⃣ Synthesis & DFT Insertion – Design Compiler NXT , TestMAX
+- 2️⃣ Synthesis – Design Compiler NXT 
 - 3️⃣ Static Timing Analysis (STA) – PrimeTime (PT)
 - 4️⃣ Place & Route (PnR) – IC Compiler II (ICC2) 
 - 5️⃣ Power Analysis & Signoff – PrimeTime-PX (PTPX)
