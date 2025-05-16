@@ -117,6 +117,26 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## Synthesis (Synopsys Design Compiler NXT)
 
+<p align="center">
+  <img width="2000" height="300" src="/Images/BLOCK2.png">
+</p>
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/NETLIST.png">
+</p>
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/AREA.png">
+</p>
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/POWER2.png">
+</p>
+
+<p align="center">
+  <img width="2000" height="300" src="/Images/POWER.png">
+</p>
+
 
 
 
