@@ -179,7 +179,20 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="2000" height="500" src="/Images/PD4.png">
 </p>
 
+<p align="center">
+  <img width="2000" height="500" src="/Images/CMD.png">
+</p>
 
+<p align="center">
+  <img width="2000" height="500" src="/Images/CMD2.png">
+</p>
+
+## Future Work
+
+- Design a Transformer Accelerator using the Systolic Array.
+- Design a parametrized version of the tensor core which can be configured to any MxN size.
+- Implement a crossbar switch for FPGA functionality.
+- Analyze the trade-offs of replacing DSP slices with Tensor slices in FPGA.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
