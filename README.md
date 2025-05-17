@@ -143,14 +143,17 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## Implementation (Synopsys IC Compiler II)
 
+- **Design Import**
 <p align="center">
   <img width="2000" height="500" src="/Images/IMPORT DESIGN.png">
 </p>
 
+- **Floorplan**
 <p align="center">
   <img width="2000" height="500" src="/Images/PD0.5.png">
 </p>
 
+- **Placement**
 <p align="center">
   <img width="2000" height="500" src="/Images/PD1.png">
 </p>
@@ -159,6 +162,7 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="2000" height="500" src="/Images/PD2.png">
 </p>
 
+- **Routed**
 <p align="center">
   <img width="2000" height="500" src="/Images/PD3.png">
 </p>
