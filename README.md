@@ -117,22 +117,27 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 
 ## Synthesis (Synopsys Design Compiler NXT)
 
+- **Block Diagram**
 <p align="center">
   <img width="2000" height="500" src="/Images/BLOCK2.png">
 </p>
 
+- **Netlist**
 <p align="center">
   <img width="2000" height="500" src="/Images/NETLIST.png">
 </p>
 
+- **Area Report**
 <p align="center">
   <img width="2000" height="500" src="/Images/AREA.png">
 </p>
 
+- **Power Report**
 <p align="center">
   <img width="2000" height="500" src="/Images/POWER2.png">
 </p>
 
+- **Timing Report**
 <p align="center">
   <img width="2000" height="500" src="/Images/TIMING1.png">
 </p>
