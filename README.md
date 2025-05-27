@@ -146,6 +146,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="2000" height="500" src="/Images/TIMING2.png">
 </p>
 
+- This design balances power, area, and performance with impressive results: it uses 74K standard cells, occupies 2.6 mm², and consumes only 3.56 mW. With a critical path delay of just 5.89 ns, the core runs comfortably at ~170 MHz. Architecturally, it delivers 16 MAC operations per clock, achieving a peak throughput of approximately 2.72 GOPS
+
 ## Implementation (Synopsys IC Compiler II)
 
 - **Design Import**
