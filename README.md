@@ -82,6 +82,11 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
   <img width="1200" height="500" src="/Images/SYSTOLIC ARRAY SCHEMATIC.png">
 </p>
 
+- **Schematic**
+ <p align="center">
+  <img width="1200" height="500" src="/Images/SCHEMATIC FINAL.png">
+</p>
+
 - **IP Block**
 <p align="center">
   <img width="1200" height="500" src="/Images/IP MID.png">
