@@ -49,8 +49,8 @@ FPGAs have evolved to accelerate deep learning (DL) by integrating specialized h
 | `rst`            | 1      | Active-high reset                          | `r1`           | 256   | Row 1 output result              |
 | `op`             | 1      | Operation control signal                   | `r2`           | 256   | Row 2 output result              |
 | `op2`            | 1      | Secondary operation control signal         | `r3`           | 256   | Row 3 output result              |
-| `a_data`         | 128    | Input data for matrix A                    | `r4`           | 256   | Row 4 output result              |
-| `b_data`         | 128    | Input data for matrix B                    | `out_transpose1` | 256 | Transposed output row 1          |
+| `a_data`         | 128    | Input data for matrix A (column wise)      | `r4`           | 256   | Row 4 output result              |
+| `b_data`         | 128    | Input data for matrix B (column wise)      | `out_transpose1` | 256 | Transposed output row 1          |
 |                  |        |                                            | `out_transpose2` | 256 | Transposed output row 2          |
 |                  |        |                                            | `out_transpose3` | 256 | Transposed output row 3          |
 |                  |        |                                            | `out_transpose4` | 256 | Transposed output row 4          |
